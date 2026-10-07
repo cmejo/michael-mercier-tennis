@@ -4,9 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Menu Toggle
+  // 1. Mobile Menu Toggle & Dropdown Handling
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const dropdownItem = document.querySelector('.nav-item-dropdown');
+  const dropdownLink = dropdownItem ? dropdownItem.querySelector(':scope > a') : null;
 
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
@@ -20,6 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.remove('open');
         mobileToggle.setAttribute('aria-expanded', 'false');
       }
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link === dropdownLink && window.innerWidth <= 1024) {
+          e.preventDefault();
+          dropdownItem.classList.toggle('dropdown-open');
+          const isOpen = dropdownItem.classList.contains('dropdown-open');
+          dropdownLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          return;
+        }
+        if (navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   }
 

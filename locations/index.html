@@ -48,32 +48,61 @@
     </div>
   </aside>
 
-  <!-- Site Header -->
+  <!-- Navigation Header -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="../index.html" class="brand-logo">
-        <div class="brand-icon">MM</div>
-        <div>
-          <div class="brand-text-name">Michael Mercier</div>
-          <div class="brand-text-subtitle">Tennis &amp; Pickleball Master Pro</div>
+      <a href="../index.html" class="brand-logo" aria-label="Michael Mercier Tennis and Pickleball Homepage">
+        <div class="brand-icon" aria-hidden="true">MM</div>
+        <div class="brand-info">
+          <span class="brand-text-name">Michael Mercier</span>
+          <span class="brand-text-subtitle">Tennis &amp; Pickleball Master Pro</span>
         </div>
       </a>
 
-      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
 
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">Harvard &amp; Bio</a></li>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="../index.html#rates">Pricing</a></li>
-          <li><a href="index.html" class="active">Locations</a></li>
-          <li><a href="../blog/index.html">Pro Tips Blog</a></li>
-          <li><a href="../index.html#contact" class="btn btn-primary btn-sm">Book Lesson ($150/hr)</a></li>
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links" id="primaryNav">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Harvard &amp; Bio</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#rates" class="nav-link">Pricing</a></li>
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link active" aria-current="page" aria-haspopup="true" aria-expanded="false">
+              <span>Locations</span>
+              <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="dropdown-menu" aria-label="Submenu Locations">
+              <li><a href="tennis-pickleball-lessons-beverly-ma.html"><span>Beverly, MA</span><span class="dropdown-menu-badge">Home Hub</span></a></li>
+              <li><a href="tennis-pickleball-lessons-salem-ma.html"><span>Salem, MA</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-danvers-ma.html"><span>Danvers, MA</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-peabody-ma.html"><span>Peabody, MA</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-marblehead-ma.html"><span>Marblehead, MA</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-manchester-by-the-sea-ma.html"><span>Manchester-by-the-Sea</span><span class="dropdown-menu-badge">Cape Ann</span></a></li>
+              <li><a href="tennis-pickleball-lessons-hamilton-wenham-ma.html"><span>Hamilton & Wenham</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-gloucester-rockport-ma.html"><span>Gloucester & Cape Ann</span><span class="dropdown-menu-badge">Cape Ann</span></a></li>
+              <li><a href="tennis-pickleball-lessons-ipswich-essex-ma.html"><span>Ipswich & Essex</span><span class="dropdown-menu-badge">North Shore</span></a></li>
+              <li><a href="tennis-pickleball-lessons-andover-north-andover-ma.html"><span>Andover & N. Andover</span><span class="dropdown-menu-badge">Merrimack</span></a></li>
+              <li><a href="tennis-pickleball-lessons-newburyport-ma.html"><span>Newburyport, MA</span><span class="dropdown-menu-badge">Seacoast</span></a></li>
+              <li><a href="tennis-pickleball-lessons-nashua-southern-nh.html"><span>Nashua & Southern NH</span><span class="dropdown-menu-badge">Southern NH</span></a></li>
+              <li class="dropdown-footer"><a href="index.html" class="dropdown-footer-link"><span>Explore All 12 Regional Service Areas</span><span class="dropdown-arrow">→</span></a></li>
+            </ul>
+          </li>
+          <li><a href="../blog/index.html" class="nav-link">Pro Tips Blog</a></li>
+          <li class="mobile-drawer-action"><a href="tel:9782736500" class="btn btn-outline btn-sm">📞 Call/Text (978) 273-6500</a></li>
+          <li class="mobile-drawer-action"><a href="../index.html#contact" class="btn btn-primary btn-sm">Book Lesson ($150/hr)</a></li>
         </ul>
       </nav>
+
+      <div class="nav-actions">
+        <a href="tel:9782736500" class="nav-phone-pill" title="Call or Text Coach Mike Directly">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>(978) 273-6500</span>
+        </a>
+        <a href="../index.html#contact" class="nav-cta-btn">Book Lesson ($150/hr)</a>
+      </div>
     </div>
   </header>
 
