@@ -156,6 +156,14 @@
     ]
   }
   </script>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
 </head>
 <body>
 
@@ -643,52 +651,52 @@
         </p>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; max-width:960px; margin-inline:auto;">
+      <div class="pricing-grid">
         <!-- Single Hour Card -->
-        <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; box-shadow:var(--shadow-md);">
-          <h3 style="font-size:1.4rem; margin-bottom:0.5rem;">Single Private Session</h3>
-          <p style="color:var(--color-text-muted); font-size:0.95rem;">Ideal for a technical tune-up, serve diagnosis, or pickleball strategy session.</p>
-          <div style="font-size:3rem; font-weight:900; color:var(--color-primary-dark); margin-block:1rem;">
-            $150 <span style="font-size:1rem; font-weight:600; color:var(--color-text-muted);">/ hour</span>
+        <div class="pricing-card">
+          <h3 class="pricing-title">Single Private Session</h3>
+          <p class="pricing-desc">Ideal for a technical tune-up, serve diagnosis, or pickleball strategy session.</p>
+          <div class="pricing-amount">
+            $150 <span class="pricing-unit">/ hour</span>
           </div>
-          <ul style="list-style:none; text-align:left; margin-bottom:2rem; font-size:0.95rem;">
-            <li style="margin-bottom:0.6rem;">✓ 60 minutes dedicated 1-on-1 coaching</li>
-            <li style="margin-bottom:0.6rem;">✓ High-speed video analysis included</li>
-            <li style="margin-bottom:0.6rem;">✓ Immediate biomechanical corrections</li>
-            <li style="margin-bottom:0.6rem;">✓ Tennis or Pickleball (junior or adult)</li>
+          <ul class="pricing-perks">
+            <li>✓ 60 minutes dedicated 1-on-1 coaching</li>
+            <li>✓ High-speed video analysis included</li>
+            <li>✓ Immediate biomechanical corrections</li>
+            <li>✓ Tennis or Pickleball (junior or adult)</li>
           </ul>
           <a href="#contact" class="btn btn-outline" style="width:100%;">Book Single Session</a>
         </div>
 
         <!-- 5-Pack Card -->
-        <div style="background:var(--color-surface); border:2px solid var(--color-primary); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; box-shadow:var(--shadow-xl); position:relative;">
-          <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--color-primary); color:var(--color-accent); font-size:0.75rem; font-weight:800; padding:0.25rem 1rem; border-radius:var(--radius-full); text-transform:uppercase; letter-spacing:0.05em;">Most Popular Package</div>
-          <h3 style="font-size:1.4rem; margin-bottom:0.5rem;">5-Hour Development Series</h3>
-          <p style="color:var(--color-text-muted); font-size:0.95rem;">Structured progressive curriculum for sustained technical and tactical breakthroughs.</p>
-          <div style="font-size:3rem; font-weight:900; color:var(--color-primary-dark); margin-block:1rem;">
-            $750 <span style="font-size:1rem; font-weight:600; color:var(--color-text-muted);">/ 5 hours</span>
+        <div class="pricing-card featured">
+          <div class="pricing-badge-popular">Most Popular Package</div>
+          <h3 class="pricing-title">5-Hour Development Series</h3>
+          <p class="pricing-desc">Structured progressive curriculum for sustained technical and tactical breakthroughs.</p>
+          <div class="pricing-amount">
+            $750 <span class="pricing-unit">/ 5 hours</span>
           </div>
-          <ul style="list-style:none; text-align:left; margin-bottom:2rem; font-size:0.95rem;">
-            <li style="margin-bottom:0.6rem;">✓ 5 x 60-minute private lessons</li>
-            <li style="margin-bottom:0.6rem;">✓ Step-by-step skill mastery progression</li>
-            <li style="margin-bottom:0.6rem;">✓ Match-play situational tactics &amp; drills</li>
-            <li style="margin-bottom:0.6rem;">✓ Priority court scheduling</li>
+          <ul class="pricing-perks">
+            <li>✓ 5 x 60-minute private lessons</li>
+            <li>✓ Step-by-step skill mastery progression</li>
+            <li>✓ Match-play situational tactics &amp; drills</li>
+            <li>✓ Priority court scheduling</li>
           </ul>
           <a href="#contact" class="btn btn-primary" style="width:100%;">Enroll in 5-Pack</a>
         </div>
 
         <!-- 10-Pack Card -->
-        <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; box-shadow:var(--shadow-md);">
-          <h3 style="font-size:1.4rem; margin-bottom:0.5rem;">10-Hour Competitive Mastery</h3>
-          <p style="color:var(--color-text-muted); font-size:0.95rem;">Designed for tournament juniors, varsity competitors, or dedicated league doubles partners.</p>
-          <div style="font-size:3rem; font-weight:900; color:var(--color-primary-dark); margin-block:1rem;">
-            $1,350 <span style="font-size:1rem; font-weight:600; color:var(--color-text-muted);">/ 10 hrs (10% Off)</span>
+        <div class="pricing-card">
+          <h3 class="pricing-title">10-Hour Competitive Mastery</h3>
+          <p class="pricing-desc">Designed for tournament juniors, varsity competitors, or dedicated league doubles partners.</p>
+          <div class="pricing-amount">
+            $1,350 <span class="pricing-unit">/ 10 hrs (10% Off)</span>
           </div>
-          <ul style="list-style:none; text-align:left; margin-bottom:2rem; font-size:0.95rem;">
-            <li style="margin-bottom:0.6rem;">✓ 10 x 60-minute sessions (Save $150)</li>
-            <li style="margin-bottom:0.6rem;">✓ Complete stroke overhaul &amp; tournament prep</li>
-            <li style="margin-bottom:0.6rem;">✓ College tennis or 4.5+ pickleball roadmap</li>
-            <li style="margin-bottom:0.6rem;">✓ Comprehensive video library access</li>
+          <ul class="pricing-perks">
+            <li>✓ 10 x 60-minute sessions (Save $150)</li>
+            <li>✓ Complete stroke overhaul &amp; tournament prep</li>
+            <li>✓ College tennis or 4.5+ pickleball roadmap</li>
+            <li>✓ Comprehensive video library access</li>
           </ul>
           <a href="#contact" class="btn btn-outline" style="width:100%;">Reserve 10-Pack</a>
         </div>
@@ -708,6 +716,8 @@
             <input type="hidden" name="_subject" value="New Seasonal Clinic Announcement Subscriber">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://michaelmerciertennis.com/?status=success#clinic-heading">
+            <input type="hidden" name="Traffic_Source" id="clinicTrafficSource" value="Direct / Organic">
+            <input type="hidden" name="Landing_Page" id="clinicLandingPage" value="">
             <div class="clinic-form-row">
               <input type="email" id="clinicEmail" name="subscriber_email" class="clinic-form-input" placeholder="Enter your email address..." required>
               <button type="submit" class="btn btn-accent">Join Clinic List →</button>
@@ -983,6 +993,9 @@
             <input type="hidden" name="_subject" value="New Coaching Inquiry - Michael Mercier Tennis Website">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://michaelmerciertennis.com/?status=success#contact">
+            <input type="hidden" name="Traffic_Source" id="inquiryTrafficSource" value="Direct / Organic">
+            <input type="hidden" name="Campaign_Name" id="inquiryCampaign" value="Website Direct">
+            <input type="hidden" name="Landing_Page" id="inquiryLandingPage" value="">
 
             <div class="form-row">
               <div class="form-group">
